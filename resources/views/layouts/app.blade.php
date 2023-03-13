@@ -21,7 +21,8 @@
         
             <nav class="flex gap-2 items-center">
                 <a class="font-bold p-1 text-gray-600 uppercase" href="">Login</a>
-                <a class="font-bold p-1 text-gray-600 uppercase" href="">Crear Cuenta</a>
+                <a class="font-bold p-1 text-gray-600 uppercase" href="/crear-cuenta">
+                    Crear Cuenta</a>
             </nav>
         </div>
       </header>
@@ -33,7 +34,7 @@
             @yield('contenido')
       </main>
 
-      <footer class="text-center p-5 text-gray-500 uppercase font-bold">
+      <footer class=" mt-10 text-center p-5 text-gray-500 uppercase font-bold">
             Devstagram todos los derechos reservados {{now()->year}}
       </footer>
 </body>
