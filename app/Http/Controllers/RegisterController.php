@@ -10,8 +10,14 @@ class RegisterController extends Controller
         return view('auth.register');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        dd('Post...');
+        //dd($request);
+        //dd($request->get('name'));
+
+        //validacion
+        $this->validate($request,[
+            'name'=>'required|min:5',
+        ]);
     }
 }
