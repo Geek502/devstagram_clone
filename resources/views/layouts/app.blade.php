@@ -18,12 +18,20 @@
       <header class="p-5 border-b bg-white shadow"> 
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-black">Devstagram</h1>
-        
-            <nav class="flex gap-2 items-center">
-                <a class="font-bold p-1 text-gray-600 uppercase" href="">Login</a>
-                <a class="font-bold p-1 text-gray-600 uppercase" href="{{route('register')}}">
-                    Crear Cuenta</a>
-            </nav>
+            @auth
+                <nav class="flex gap-2 items-center">
+                    <a class="font-bold p-1 text-gray-600 uppercase" href="">Cerrar Sesión</a>
+                </nav>
+            @endauth
+
+            @guest
+                <nav class="flex gap-2 items-center">
+                    <a class="font-bold p-1 text-gray-600 uppercase" href="">Login</a>
+                    <a class="font-bold p-1 text-gray-600 uppercase" href="{{route('register')}}">
+                        Crear Cuenta</a>
+                </nav>
+            @endguest
+
         </div>
       </header>
 
