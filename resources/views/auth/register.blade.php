@@ -24,10 +24,12 @@
                         class="border p-3 w-full @error('name') border-red-600 @enderror"
                         value="{{old('name')}}"
                         >
-                </div>
-                @error('name')
+
+                        @error('name')
                     <p class="bg-red-500  rounded-lg s text-white text-center font-bold uppercase">{{$message}}</p>
                 @enderror
+                </div>
+                
 
                 <div class="m-5">
                     <label for="username" class="mb-2 block uppercase text-gray-500 font-bold">Username</label>

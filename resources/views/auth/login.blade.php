@@ -45,11 +45,15 @@
                     class="border p-3 w-full rounded-lg @error('password') border-red-600 @enderror"
                     value="{{old('password')}}"
                     >
-                </div>
+                
                 @error('password')
                     <p class="bg-red-500  rounded-lg s text-white text-center font-bold uppercase">{{$message}}</p>
                 @enderror
-
+                
+                <div class="mb-5 mt-5">
+                    <input type="checkbox" name="remember"><label for="mb-2 block uppercase text-gray-500 font-bold"> Mantener mi sesión abierta</label>
+                </div>
+            </div>
                <input type="submit"
                       value="Crear Cuenta" 
                       class="bg-sky-600 cursor-pointer p-2 rounded-lg hover:bg-sky-700 uppercase text-white w-full"
